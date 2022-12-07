@@ -12,5 +12,8 @@ public class FloatingBear extends Hero implements DisputeMembers {
         return "безжалостно давя, ехал на";
     }
 
-
+    @Override
+    public boolean DisputeMember() {
+        return true;
+    }
 }

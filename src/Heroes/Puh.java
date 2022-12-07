@@ -11,5 +11,10 @@ public class Puh extends Hero implements DisputeMembers {
         return "ехал, отчаянно болтая ногами, на";
     }
 
+    @Override
+    public boolean DisputeMember(){
+        return true;
+    }
+
 
 }

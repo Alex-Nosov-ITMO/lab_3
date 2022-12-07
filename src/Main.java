@@ -23,14 +23,19 @@ public class Main {
         Puh.say("Я хочу плыть сверху");
         Bear.say("Нет, я буду сверху");
 
-        Dispute dispute = new Dispute("Спор за место под солнцем");
-        String a = dispute.WhoWin(Puh, Bear);
-        System.out.println("Победитель спора : " + a);
-        if (a == "Пух"){
-            System.out.println(Puh.getName() + " " + Puh.DangleFeet() + " " + Bear.getName());
-        }else if (a == "Плавающий медведь") {
-            System.out.println(Bear.getName() + ", " + Bear.RuthlesslyCrush() + " " + Puh.getName());
+
+        if(Puh.DisputeMember() && Bear.DisputeMember()) {
+            Dispute dispute = new Dispute("Спор за место под солнцем");
+            String a = dispute.WhoWin(Puh, Bear);
+            System.out.println("Победитель спора : " + a);
+
+            if (a == "Пух") {
+                System.out.println(Puh.getName() + " " + Puh.DangleFeet() + " " + Bear.getName());
+            } else if (a == "Плавающий медведь") {
+                System.out.println(Bear.getName() + ", " + Bear.RuthlesslyCrush() + " " + Puh.getName());
+            }
         }
+
 
 
 
@@ -66,6 +71,7 @@ public class Main {
         System.out.println("HouseCristofers:" + house);
         System.out.println("LowlandForest:" + LowlandForest);
         System.out.println("TheHighestLocationInForest:" + TheHighestLocationInForest);
-        System.out.println("Dispute:" + dispute);
     }
+
+
 }
