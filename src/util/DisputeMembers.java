@@ -1,5 +1,6 @@
 package util;
 
 public interface DisputeMembers {
-    public boolean DisputeMember();
+    public boolean isDisputeMember();
+    public void setDisputeMember(boolean disputemember);
 }

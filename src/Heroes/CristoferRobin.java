@@ -1,28 +1,26 @@
 package Heroes;
 
-import Locations.TheHighestLocationInForest;
-
 public class CristoferRobin extends Hero{
-    public CristoferRobin(String name){
-        super(name);
+    public CristoferRobin(String name, boolean disputemember){
+        super(name, disputemember);
     }
-    public String Live(){
+    public String live(){
         return "живет в ";
     }
 
-    public String LookDawn(){
-        return "сотреть вниз";
+    public String lookDawn(){
+        return "смотреть вниз";
     }
 
-    public String AdmireTheWater(){
+    public String admireTheWater(){
         return "любоваться водой";
     }
 
-    public String StayHome(){
-        return "остаться в ";
+    public String stayHome(){
+        return "остаться дома ";
     }
 
-    public String ThingOfDifferentThings(){
+    public String thingOfDifferentThings(){
         return "Думать о разных вещах";
     }
 }

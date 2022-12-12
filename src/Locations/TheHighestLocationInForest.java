@@ -8,7 +8,7 @@ public class TheHighestLocationInForest extends OpenLocations{
         System.out.println(weather.getWeatherDescription());
     }
 
-    public void NotWater(){
+    public void notWater(){
         System.out.println("Однако вода от дождя не доходит до сюда." );
     }
 }

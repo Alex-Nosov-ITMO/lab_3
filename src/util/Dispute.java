@@ -12,10 +12,20 @@ public class Dispute {
         this.name = name;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
     public String WhoWin(Hero a, Hero b){
+
         final double CHANCE_TO_WIN = 0.5;
-        if (random() > 1 - CHANCE_TO_WIN) return a.getName();
-        else return b.getName();
+
+        if (!a.isDisputeMember() || !b.isDisputeMember()){
+            System.out.println(a.getName() + " или " + b.getName() + " не может учавствовать в споре.");
+        }
+
+        else if (random() > 1 - CHANCE_TO_WIN) return a.getName();
+        return b.getName();
     }
 
     @Override

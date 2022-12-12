@@ -1,20 +1,17 @@
 package Heroes;
 
-import util.DisputeMembers;
 
-public class Puh extends Hero implements DisputeMembers {
-    public Puh(String name){
-        super(name);
+public class Puh extends Hero {
+    public Puh(String name, boolean disputemember){
+        super(name, disputemember);
     }
 
-    public String DangleFeet (){
+
+    public String dangleFeet (){
         return "ехал, отчаянно болтая ногами, на";
     }
 
-    @Override
-    public boolean DisputeMember(){
-        return true;
-    }
+
 
 
 }
