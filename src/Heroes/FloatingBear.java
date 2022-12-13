@@ -6,6 +6,6 @@ public class FloatingBear extends Hero {
     }
 
     public String ruthlesslyCrush(){
-        return ", безжалостно давя, ехал на";
+        return ", безжалостно давя, ехал на ";
     }
 }

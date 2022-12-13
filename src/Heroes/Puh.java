@@ -8,7 +8,7 @@ public class Puh extends Hero {
 
 
     public String dangleFeet (){
-        return "ехал, отчаянно болтая ногами, на";
+        return " ехал, отчаянно болтая ногами, на ";
     }
 
 
