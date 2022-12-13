@@ -29,8 +29,6 @@ public abstract class Hero implements Locatable, DisputeMembers {
         return this.name;
     }
 
-    public boolean getDisputemember(){return this.disputemember;}
-
     @Override
     public void setDisputeMember(boolean disputemember) {
         this.disputemember = disputemember;
