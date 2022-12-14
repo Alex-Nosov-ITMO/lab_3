@@ -40,8 +40,8 @@ public abstract class Hero implements Locatable, DisputeMembers {
     }
 
     @Override
-    public Location locate() {
-        return this.location;
+    public String locate() {
+        return this.location.getName();
     }
 
     @Override

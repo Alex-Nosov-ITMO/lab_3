@@ -9,6 +9,7 @@ public class Dispute {
 
 
     public Dispute(String name){
+        System.out.println(name);
         this.name = name;
     }
 
@@ -19,12 +20,29 @@ public class Dispute {
     public String WhoWin(Hero a, Hero b){
 
         final double CHANCE_TO_WIN = 0.5;
-
-        if (!a.isDisputeMember() || !b.isDisputeMember()){
-            System.out.println(a.getName() + " или " + b.getName() + " не может учавствовать в споре.");
+        boolean random;
+        if(random() > 1 - CHANCE_TO_WIN) {
+            random = true;
         }
+        else random = false;
 
-        else if (random() > 1 - CHANCE_TO_WIN) return a.getName();
+        if (!a.isDisputeMember() && !b.isDisputeMember()){
+            System.out.println("Спор не может состояться, так как ни один из участников не может участвовать в нем.");
+            return "Ошибка!";
+        }
+        else if (!a.isDisputeMember()){
+            System.out.println(a.getName() + " не может участвовать в споре");
+            return ("Ошибка!");
+        }
+        else if (!b.isDisputeMember()){
+            System.out.println(b.getName() + " не может участвовать в споре");
+            return ("Ошибка!");
+        }
+        else if (random){
+            System.out.println("Победитель спора: " + a.getName());
+            return a.getName();
+        }
+        System.out.println("Победитель спора: " + b.getName());
         return b.getName();
     }
 

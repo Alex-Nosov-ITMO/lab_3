@@ -17,6 +17,7 @@ public class Main {
 
 
 
+
         LowlandForest LowlandForest = new LowlandForest("Низина леса", Weather.RAINY);
 
         Puh.setLocation(LowlandForest);
@@ -27,12 +28,10 @@ public class Main {
 
 
         Dispute dispute = new Dispute("Спор за место под солнцем");
-        System.out.println(dispute.getName());
-        String windispute = dispute.WhoWin(Puh, Bear);
-        if (windispute == "Пух"){
-            System.out.println(Puh.getName() + Puh.dangleFeet() + Bear.getName());
-        }
-        else System.out.println(Bear.getName() + Bear.ruthlesslyCrush() + Puh.getName());
+        String windispute = dispute.WhoWin(Bear, Puh);
+        if (windispute.equals(Puh.getName())) Puh.ride(Bear);
+        else if (windispute.equals(Bear.getName())) Bear.ride(Puh);
+
 
 
 
@@ -44,18 +43,14 @@ public class Main {
         HouseCristofers house = new HouseCristofers("Дом Кристофера");
         cristoferRobin.setLocation(house);
         TheHighestLocationInForest TheHighestLocationInForest = new TheHighestLocationInForest("Самое высокое место в лесу", Weather.RAINY);
-        System.out.println(cristoferRobin.getName() + " " + cristoferRobin.live() + house.getName()+ " на " + TheHighestLocationInForest.getName());
-        TheHighestLocationInForest.notWater();
+        cristoferRobin.live();
 
 
 
         /*И, пожалуй, было довольно весело смотреть вниз и любоваться всей этой водой, но дождь был такой сильный,
          что Кристофер Робин почти все время сидел дома и думал о разных вещах.
          */
-
-        System.out.println("Было довольно весело " + cristoferRobin.lookDawn() + " и "+ cristoferRobin.admireTheWater() +
-                ", но " + Weather.RAINY.getWeatherDescription() + " настолько сильно, что " + cristoferRobin.getName() + " " + cristoferRobin.stayHome() +
-                " и " + cristoferRobin.thingOfDifferentThings());
+        cristoferRobin.SitHomeDuringTheRains();
 
 
 
@@ -70,6 +65,13 @@ public class Main {
         System.out.println("TheHighestLocationInForest:" + TheHighestLocationInForest);
         System.out.println("Dispute:" + dispute);
     }
+
+
+
+
+
+
+
 
 
 }
