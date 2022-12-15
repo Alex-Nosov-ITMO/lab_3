@@ -6,9 +6,10 @@ import java.util.Objects;
 import Locations.Locatable;
 import Locations.Location;
 import util.DisputeMembers;
+import util.Ride;
 
 
-public abstract class Hero implements Locatable, DisputeMembers {
+public abstract class Hero implements Locatable, DisputeMembers, Ride {
     public Hero(String name, boolean disputemember){
         setName(name);
         setDisputeMember(disputemember);
@@ -76,4 +77,9 @@ public abstract class Hero implements Locatable, DisputeMembers {
         System.out.println(this.name + " сказал:" + text);
     }
 
+
+    @Override
+    public void ride(Hero a) {
+        System.out.println(this.getName() + " едет на " + a.getName());
+    }
 }

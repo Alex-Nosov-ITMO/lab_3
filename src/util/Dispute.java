@@ -17,7 +17,7 @@ public class Dispute {
         return this.name;
     }
 
-    public String WhoWin(Hero a, Hero b){
+    public Hero WhoWin(Hero a, Hero b){
 
         final double CHANCE_TO_WIN = 0.5;
         boolean random;
@@ -28,22 +28,22 @@ public class Dispute {
 
         if (!a.isDisputeMember() && !b.isDisputeMember()){
             System.out.println("Спор не может состояться, так как ни один из участников не может участвовать в нем.");
-            return "Ошибка!";
+            return null;
         }
         else if (!a.isDisputeMember()){
             System.out.println(a.getName() + " не может участвовать в споре");
-            return ("Ошибка!");
+            return null;
         }
         else if (!b.isDisputeMember()){
             System.out.println(b.getName() + " не может участвовать в споре");
-            return ("Ошибка!");
+            return null;
         }
         else if (random){
             System.out.println("Победитель спора: " + a.getName());
-            return a.getName();
+            return a;
         }
         System.out.println("Победитель спора: " + b.getName());
-        return b.getName();
+        return b;
     }
 
     @Override

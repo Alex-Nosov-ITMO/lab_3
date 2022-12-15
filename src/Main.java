@@ -1,5 +1,6 @@
 import Heroes.CristoferRobin;
 import Heroes.FloatingBear;
+import Heroes.Hero;
 import Heroes.Puh;
 import Locations.HouseCristofers;
 import Locations.LowlandForest;
@@ -12,25 +13,26 @@ public class Main {
 
         /*Некоторое время Пух и "Плавучий Медведь" не могли решить вопроса о том,
          кто из них должен быть сверху, но в конце концов они договорились.*/
-        Puh Puh = new Puh("Пух", true);
-        FloatingBear Bear = new FloatingBear("Плавающий медведь", true);
+        Puh puh = new Puh("Пух", true);
+        FloatingBear bear = new FloatingBear("Плавающий медведь", true);
 
 
 
 
-        LowlandForest LowlandForest = new LowlandForest("Низина леса", Weather.RAINY);
 
-        Puh.setLocation(LowlandForest);
-        Bear.setLocation(LowlandForest);
+        LowlandForest lowlandForest = new LowlandForest("Низина леса", Weather.RAINY);
 
-        Puh.say("Я хочу плыть сверху");
-        Bear.say("Нет, я буду сверху");
+        puh.setLocation(lowlandForest);
+        bear.setLocation(lowlandForest);
+
+        puh.say("Я хочу плыть сверху");
+        bear.say("Нет, я буду сверху");
 
 
         Dispute dispute = new Dispute("Спор за место под солнцем");
-        String windispute = dispute.WhoWin(Bear, Puh);
-        if (windispute.equals(Puh.getName())) Puh.ride(Bear);
-        else if (windispute.equals(Bear.getName())) Bear.ride(Puh);
+        Hero windispute = dispute.WhoWin(bear, puh);
+        if (windispute.equals(puh)) puh.ride(bear);
+        else if (windispute.equals(bear)) bear.ride(puh);
 
 
 
@@ -42,7 +44,7 @@ public class Main {
         CristoferRobin cristoferRobin = new CristoferRobin("Кристофер Робин", false);
         HouseCristofers house = new HouseCristofers("Дом Кристофера");
         cristoferRobin.setLocation(house);
-        TheHighestLocationInForest TheHighestLocationInForest = new TheHighestLocationInForest("Самое высокое место в лесу", Weather.RAINY);
+        TheHighestLocationInForest theHighestLocationInForest = new TheHighestLocationInForest("Самое высокое место в лесу", Weather.RAINY);
         cristoferRobin.live();
 
 
@@ -57,12 +59,12 @@ public class Main {
 
 
         System.out.println("Описание всех объектов:");
-        System.out.println("Puh:" + Puh);
-        System.out.println("FloatingBear:" + Bear);
+        System.out.println("Puh:" + puh);
+        System.out.println("FloatingBear:" + bear);
         System.out.println("CristoferRobin:" + cristoferRobin);
         System.out.println("HouseCristofers:" + house);
-        System.out.println("LowlandForest:" + LowlandForest);
-        System.out.println("TheHighestLocationInForest:" + TheHighestLocationInForest);
+        System.out.println("LowlandForest:" + lowlandForest);
+        System.out.println("TheHighestLocationInForest:" + theHighestLocationInForest);
         System.out.println("Dispute:" + dispute);
     }
 

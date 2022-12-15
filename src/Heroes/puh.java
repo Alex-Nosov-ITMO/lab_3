@@ -1,9 +1,7 @@
 package Heroes;
 
 
-import util.Ride;
-
-public class Puh extends Hero implements Ride {
+public class Puh extends Hero {
     public Puh(String name, boolean disputemember){
         super(name, disputemember);
     }

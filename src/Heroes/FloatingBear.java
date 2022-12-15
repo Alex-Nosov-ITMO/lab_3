@@ -1,8 +1,8 @@
 package Heroes;
 
-import util.Ride;
 
-public class FloatingBear extends Hero implements Ride {
+
+public class FloatingBear extends Hero{
     public FloatingBear(String name, boolean disputemember){
         super(name, disputemember);
     }
