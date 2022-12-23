@@ -27,8 +27,8 @@ public class CristoferRobin extends Hero{
     }
 
 
-    public void SitHomeDuringTheRains(){
+    public void sitHomeDuringTheRains(){
         System.out.println(this.getName() + this.lookDawn() +" и" + this.admireTheWater() + " было весело, но "
-                + Weather.RAINY + this.getName() + this.stayHome() + "и" + this.thingOfDifferentThings());
+                + Weather.RAINY.getWeatherDescription()+ ", поэтому " + this.getName() + this.stayHome() + "и" + this.thingOfDifferentThings());
     }
 }

@@ -9,15 +9,12 @@ import util.Dispute;
 import util.Weather;
 
 public class Main {
-    public static void main(String[] agrs){
+    public static void main(String[] agrs) {
 
         /*Некоторое время Пух и "Плавучий Медведь" не могли решить вопроса о том,
          кто из них должен быть сверху, но в конце концов они договорились.*/
         Puh puh = new Puh("Пух", true);
         FloatingBear bear = new FloatingBear("Плавающий медведь", true);
-
-
-
 
 
         LowlandForest lowlandForest = new LowlandForest("Низина леса", Weather.RAINY);
@@ -52,10 +49,7 @@ public class Main {
         /*И, пожалуй, было довольно весело смотреть вниз и любоваться всей этой водой, но дождь был такой сильный,
          что Кристофер Робин почти все время сидел дома и думал о разных вещах.
          */
-        cristoferRobin.SitHomeDuringTheRains();
-
-
-
+        cristoferRobin.sitHomeDuringTheRains();
 
 
         System.out.println("Описание всех объектов:");
@@ -66,14 +60,7 @@ public class Main {
         System.out.println("LowlandForest:" + lowlandForest);
         System.out.println("TheHighestLocationInForest:" + theHighestLocationInForest);
         System.out.println("Dispute:" + dispute);
+
+
     }
-
-
-
-
-
-
-
-
-
 }
